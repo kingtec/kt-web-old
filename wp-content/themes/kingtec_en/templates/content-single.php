@@ -10,7 +10,7 @@ $careers = get_category_by_slug('careers');
 $news_id = $news->term_id;
 $updates_id = $updates->term_id;
 $industry_id = $industry->term_id;
-$careers_id = $industry->term_id;
+$careers_id = $careers->term_id;
 
 
 if (in_category(array($news_id,$updates_id,$industry_id))) { 
