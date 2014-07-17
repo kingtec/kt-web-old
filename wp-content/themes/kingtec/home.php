@@ -10,10 +10,15 @@ Template Name: Home
 
 <?php 
 
+$category = get_category_by_slug('company');
+$cat_id = $category->term_id;
+
+
+
 $last = wp_get_recent_posts( array(
 
                               'numberposts' => 10,
-                              'category' => 2,
+                              'category' => $cat_id,
                               )
 );
 
