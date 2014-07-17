@@ -99,6 +99,36 @@ function breadcrumb_generator($nav_array) {
     }
 }
 
+function my_login_logo() { ?>
+    <style type="text/css">
+        body.login {
+        background: #008050;
+        }
+        body.login div#login h1 a {
+            background-image: url(/images/ktlogin.png);
+            padding-bottom: 30px;
+            width: auto;
+            background-size: auto;
+            -webkit-background-size: auto;
+        }
+        body.login div#login .submit .button {
+           background: #4BC970;
+            border-color: #3AC162;
+        }
+        body.login #nav a {
+            color: #fff;
+        }
+        body.login #backtoblog a {
+            color: #fff;
+        }
+
+
+
+        
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
 
 
 
