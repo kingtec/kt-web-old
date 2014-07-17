@@ -11,7 +11,7 @@
  * 3. /theme/assets/js/main.min.js (in footer)
  */
 function roots_scripts() {
-  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '377787a773088c267930035f54b95398');
+  wp_enqueue_style('roots_main', get_template_directory_uri() . '/assets/css/main.min.css', false, '4dc6c7fbd8a273f0a13fb529cad80e23');
 
   // jQuery is loaded using the same method from HTML5 Boilerplate:
   // Grab Google CDN's latest jQuery with a protocol relative URL; fallback to local if offline
@@ -29,7 +29,7 @@ function roots_scripts() {
 
 
   wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.7.0.min.js', array(), null, false);
-  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '3e155120ba3b6bb2351334b272dbe745', true);
+  wp_register_script('roots_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '6ba243d021815ff88c8aa1c829a31c02', true);
 
 
   wp_enqueue_script('modernizr');
@@ -46,6 +46,13 @@ function roots_scripts() {
 
     wp_register_script('maptile', 'https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js');
     wp_enqueue_script('maptile');
+
+  }
+
+    if ($_SERVER["REQUEST_URI"] == '/contact/') {
+
+    wp_register_script('baidumap', 'http://api.map.baidu.com/api?key=&v=1.1&services=true');
+    wp_enqueue_script('baidumap');
 
   }
 
