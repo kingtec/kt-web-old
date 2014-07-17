@@ -2,16 +2,28 @@
 
 <?php 
 
+$news = get_category_by_slug('news');
+$updates = get_category_by_slug('updates');
+$industry = get_category_by_slug('industry');
+$careers = get_category_by_slug('careers');
 
-if (in_category(array(1,2,3))) { 
+$news_id = $news->term_id;
+$updates_id = $updates->term_id;
+$industry_id = $industry->term_id;
+$careers_id = $industry->term_id;
+
+
+if (in_category(array($news_id,$updates_id,$industry_id))) { 
 
   get_template_part('templates/news', 'header');
 
-  } elseif (in_category(5)) {
+  } elseif (in_category($careers_id)) {
 
   get_template_part('templates/careers', 'header');
 
-  } ?>
+  } 
+
+  ?>
 
 
 

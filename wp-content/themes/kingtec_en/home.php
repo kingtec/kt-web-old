@@ -10,10 +10,14 @@ Template Name: Home
 
 <?php 
 
+$category = get_category_by_slug('updates');
+$cat_id = $category->term_id;
+
+
 $last = wp_get_recent_posts( array(
 
                               'numberposts' => 10,
-                              'category' => 3,
+                              'category' => $cat_id,
                               )
 );
 

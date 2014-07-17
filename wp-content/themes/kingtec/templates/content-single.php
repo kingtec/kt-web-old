@@ -23,7 +23,9 @@ if (in_category(array($news_id,$updates_id,$industry_id))) {
 
   get_template_part('templates/careers', 'header');
 
-  } ?>
+  } 
+
+  ?>
 
 
 
