@@ -57,7 +57,7 @@ if (in_category(array($news_id,$updates_id,$industry_id))) {
 
     <?php 
 
-      if (in_category(5)) { 
+      if (in_category($careers_id)) { 
 
         ?>
 
