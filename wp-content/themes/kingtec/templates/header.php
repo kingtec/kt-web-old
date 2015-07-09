@@ -105,7 +105,13 @@
               </li>
 
             <li><a href="/contact/">联系我们</a></li>
-            <li><a href="http://222.73.85.54:8888/" target="_BLANK">OA登录</a></li>
+            <li class="dropdown">
+              <a href="http://220.171.107.118:8888/" target="_BLANK">OA登录</a>
+              <ul class="dropdown-menu">
+                    <li><a href="http://220.171.107.118:8888/">OA 1.0</a></li>
+                    <li><a href="http://120.25.158.161:8080/camunda/app/tasklist">OA 2.0</a></li>
+                </ul>
+            </li>
             <li><a href="http://mail.kingtecgroup.net" target="_BLANK">邮箱登陆</a></li> 
             <li><a href="/en/" style="color:#2D9668">English</a></li>
 
